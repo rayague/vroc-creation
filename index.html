@@ -788,7 +788,7 @@
           >
             <div class="p-lg-5 pe-lg-0">
               <div class="section-title text-start">
-                <h1 class="display-5 mb-4">Free Quote</h1>
+                <h1 class="display-5 mb-4">Devis Gratuit</h1>
               </div>
               <p class="mb-4 pb-2">
                 Obtenez un devis gratuit pour votre projet. Nous sommes là pour
@@ -798,47 +798,53 @@
               </p>
               <form>
                 <div class="row g-3">
-                  <div class="col-12 col-sm-6">
-                    <input
-                      type="text"
-                      class="form-control border-0"
-                      placeholder="Your Name"
-                      style="height: 55px"
-                    />
+                  <div class="col-md-6">
+                    <div class="form-floating">
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="nom"
+                        placeholder="Votre Nom"
+                      />
+                      <label for="nom">Votre Nom</label>
+                    </div>
                   </div>
-                  <div class="col-12 col-sm-6">
-                    <input
-                      type="email"
-                      class="form-control border-0"
-                      placeholder="Your Email"
-                      style="height: 55px"
-                    />
-                  </div>
-                  <div class="col-12 col-sm-6">
-                    <input
-                      type="text"
-                      class="form-control border-0"
-                      placeholder="Your Mobile"
-                      style="height: 55px"
-                    />
-                  </div>
-                  <div class="col-12 col-sm-6">
-                    <select class="form-select border-0" style="height: 55px">
-                      <option selected>Select A Service</option>
-                      <option value="1">Service 1</option>
-                      <option value="2">Service 2</option>
-                      <option value="3">Service 3</option>
-                    </select>
+                  <div class="col-md-6">
+                    <div class="form-floating">
+                      <input
+                        type="email"
+                        class="form-control"
+                        id="email"
+                        placeholder="Votre Email"
+                      />
+                      <label for="email">Votre Email</label>
+                    </div>
                   </div>
                   <div class="col-12">
-                    <textarea
-                      class="form-control border-0"
-                      placeholder="Special Note"
-                    ></textarea>
+                    <div class="form-floating">
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="sujet"
+                        placeholder="Sujet"
+                      />
+                      <label for="sujet">Sujet</label>
+                    </div>
+                  </div>
+                  <div class="col-12">
+                    <div class="form-floating">
+                      <textarea
+                        class="form-control"
+                        placeholder="Laissez un message ici"
+                        id="message"
+                        style="height: 100px"
+                      ></textarea>
+                      <label for="message">Message</label>
+                    </div>
                   </div>
                   <div class="col-12">
                     <button class="btn btn-primary w-100 py-3" type="submit">
-                      Submit
+                      Envoyer le message
                     </button>
                   </div>
                 </div>
@@ -854,11 +860,12 @@
     <div class="container-xxl py-5">
       <div class="container">
         <div class="section-title text-center">
-          <h1 class="display-5 mb-5">Meet Our Team</h1>
+          <h1 class="display-5 mb-5">Rencontrez Notre Équipe</h1>
           <p class="mb-4">
-            Our team is composed of talented individuals dedicated to delivering
-            the best results for our clients. Each member brings unique skills
-            and expertise to the table, working together to achieve excellence.
+            Notre équipe est composée de professionnels talentueux et
+            passionnés, chacun spécialisé dans un domaine spécifique, allant de
+            la création de sites web à la conception de logos, en passant par le
+            référencement SEO et la production de contenu.
           </p>
         </div>
         <div class="row g-4">
@@ -885,8 +892,8 @@
               <div
                 class="text-center border border-5 border-light border-top-0 p-4"
               >
-                <h5 class="mb-0">John Doe</h5>
-                <small>Project Manager</small>
+                <h5 class="mb-0">Clara Dubois</h5>
+                <small>Spécialiste SEO & Rédaction Web</small>
               </div>
             </div>
           </div>
@@ -913,8 +920,8 @@
               <div
                 class="text-center border border-5 border-light border-top-0 p-4"
               >
-                <h5 class="mb-0">Jane Smith</h5>
-                <small>Lead Developer</small>
+                <h5 class="mb-0">Lucas Martin</h5>
+                <small>Développeur Web</small>
               </div>
             </div>
           </div>
@@ -941,8 +948,8 @@
               <div
                 class="text-center border border-5 border-light border-top-0 p-4"
               >
-                <h5 class="mb-0">Emily Johnson</h5>
-                <small>UX/UI Designer</small>
+                <h5 class="mb-0">Sophie Lefevre</h5>
+                <small>Designer Graphique & Création de Logo</small>
               </div>
             </div>
           </div>
@@ -969,8 +976,8 @@
               <div
                 class="text-center border border-5 border-light border-top-0 p-4"
               >
-                <h5 class="mb-0">Michael Brown</h5>
-                <small>Marketing Specialist</small>
+                <h5 class="mb-0">Marc Dupont</h5>
+                <small>Monteur Vidéo & Retouche Photo</small>
               </div>
             </div>
           </div>
@@ -1055,7 +1062,8 @@
           <div class="col-lg-3 col-md-6">
             <h4 class="text-light mb-4">Adresse</h4>
             <p class="mb-2">
-              <i class="fa fa-map-marker-alt me-3"></i>123 Rue, Paris, France
+              <i class="fa fa-map-marker-alt me-3"></i>VROC-CRÉATION, Cotonou,
+              Bénin
             </p>
             <p class="mb-2">
               <i class="fa fa-phone-alt me-3"></i>+33 1 23 45 67 89
