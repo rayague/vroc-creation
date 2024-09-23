@@ -1,11 +1,7 @@
-  =>  Template Name    : WooDY - Carpenter Website Template
+VROC-CRÉATION
+Chez VROC-CRÉATION, nous croyons en la puissance de l'imagination et de la créativité pour transformer des idées en réalité. Notre mission est d'offrir des créations artistiques uniques, en nous spécialisant dans la couture sur mesure et la conception de vêtements élégants et durables. Chaque pièce que nous créons est soigneusement pensée pour allier esthétique, qualité, et respect de l'environnement.
 
-  =>  Template Link    : https://htmlcodex.com/carpenter-website-template-free
+Nous mettons un point d'honneur à utiliser des matériaux écoresponsables, reflétant ainsi notre engagement envers une mode durable. Depuis nos débuts, nous avons travaillé avec passion pour offrir des créations originales qui non seulement correspondent aux besoins de nos clients, mais aussi reflètent leur personnalité. Notre approche personnalisée garantit des vêtements aux finitions impeccables, où chaque détail compte.
 
-  =>  Template License : https://htmlcodex.com/license (or read the LICENSE.txt file)
+Nous sommes fiers de participer à un avenir où la mode est à la fois belle et respectueuse de la planète.
 
-  =>  Template Author  : HTML Codex
-
-  =>  Author Website   : https://htmlcodex.com
-
-  =>  About HTML Codex : HTML Codex is one of the top creators and publishers of Free HTML templates, HTML landing pages, HTML email templates and HTML snippets in the world. Read more at ( https://htmlcodex.com/about-us )

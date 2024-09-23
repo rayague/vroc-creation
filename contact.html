@@ -164,14 +164,10 @@
               </div>
               <p class="mb-4">
                 Vous avez un projet à réaliser ou vous souhaitez plus
-                d'informations sur nos services ? Chez VROC-CREATION, nous
-                sommes spécialisés dans la création de sites web, le
-                référencement SEO, la création de logos, la rédaction web, le
-                design, la création de contenu, le montage vidéo et la retouche
-                photo. N'hésitez pas à nous envoyer un message pour discuter de
-                vos besoins.
+                d'informations sur nos services ? N'hésitez pas à nous envoyer
+                un message pour discuter de vos besoins.
               </p>
-              <form>
+              <form id="contactForm">
                 <div class="row g-3">
                   <div class="col-md-6">
                     <div class="form-floating">
@@ -180,6 +176,7 @@
                         class="form-control"
                         id="nom"
                         placeholder="Votre Nom"
+                        required
                       />
                       <label for="nom">Votre Nom</label>
                     </div>
@@ -191,6 +188,7 @@
                         class="form-control"
                         id="email"
                         placeholder="Votre Email"
+                        required
                       />
                       <label for="email">Votre Email</label>
                     </div>
@@ -202,6 +200,7 @@
                         class="form-control"
                         id="sujet"
                         placeholder="Sujet"
+                        required
                       />
                       <label for="sujet">Sujet</label>
                     </div>
@@ -213,12 +212,17 @@
                         placeholder="Laissez un message ici"
                         id="message"
                         style="height: 100px"
+                        required
                       ></textarea>
                       <label for="message">Message</label>
                     </div>
                   </div>
                   <div class="col-12">
-                    <button class="btn btn-primary w-100 py-3" type="submit">
+                    <button
+                      class="btn btn-primary w-100 py-3"
+                      id="sendMessage"
+                      type="submit"
+                    >
                       Envoyer le message
                     </button>
                   </div>
@@ -288,20 +292,21 @@
           </div>
           <div class="col-lg-3 col-md-6">
             <h4 class="text-light mb-4">Services</h4>
-            <a class="btn btn-link" href="">Création de Sites Web</a>
-            <a class="btn btn-link" href="">Référencement SEO</a>
-            <a class="btn btn-link" href="">Création de Logos</a>
-            <a class="btn btn-link" href="">Rédaction Web</a>
-            <a class="btn btn-link" href="">Montage Vidéo</a>
-            <a class="btn btn-link" href="">Retouche Photo</a>
+            <a class="btn btn-link" href="project.html"
+              >Création de Sites Web</a
+            >
+            <a class="btn btn-link" href="project.html">Référencement SEO</a>
+            <a class="btn btn-link" href="project.html">Création de Logos</a>
+            <a class="btn btn-link" href="project.html">Rédaction Web</a>
+            <a class="btn btn-link" href="project.html">Montage Vidéo</a>
+            <a class="btn btn-link" href="project.html">Retouche Photo</a>
           </div>
           <div class="col-lg-3 col-md-6">
             <h4 class="text-light mb-4">Liens Utiles</h4>
-            <a class="btn btn-link" href="">À Propos de Nous</a>
-            <a class="btn btn-link" href="">Contactez-Nous</a>
-            <a class="btn btn-link" href="">Nos Services</a>
-            <a class="btn btn-link" href="">Conditions Générales</a>
-            <a class="btn btn-link" href="">Support</a>
+            <a class="btn btn-link" href="about.html">À Propos de Nous</a>
+            <a class="btn btn-link" href="contact.html">Contactez-Nous</a>
+            <a class="btn btn-link" href="service.html">Nos Services</a>
+            <a class="btn btn-link" href="quote.html">Demander un devis</a>
           </div>
           <div class="col-lg-3 col-md-6">
             <h4 class="text-light mb-4">Newsletter</h4>
@@ -401,6 +406,33 @@
       app.listen(PORT, () => {
         console.log(`Server is running on http://localhost:${PORT}`);
       });
+    </script>
+    <script>
+      document
+        .getElementById("contactForm")
+        .addEventListener("submit", function (event) {
+          event.preventDefault(); // Empêche l'envoi du formulaire
+
+          // Récupère les données du formulaire
+          const nom = document.getElementById("nom").value;
+          const email = document.getElementById("email").value;
+          const sujet = document.getElementById("sujet").value;
+          const message = document.getElementById("message").value;
+
+          // Numéro WhatsApp du destinataire (mettre ici le bon numéro)
+          const numeroWhatsapp = "22998765432";
+
+          // Construire le message WhatsApp
+          const texteMessage = `Nom: ${nom}\nEmail: ${email}\nSujet: ${sujet}\nMessage: ${message}`;
+
+          // Créer un lien WhatsApp
+          const lienWhatsApp = `https://wa.me/${numeroWhatsapp}?text=${encodeURIComponent(
+            texteMessage
+          )}`;
+
+          // Rediriger vers WhatsApp avec le message pré-rempli
+          window.open(lienWhatsApp, "_blank");
+        });
     </script>
 
     <!-- Template Javascript -->
