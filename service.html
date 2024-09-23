@@ -543,6 +543,7 @@
               <button
                 type="button"
                 class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2"
+                onclick="subscribe()"
               >
                 S'inscrire
               </button>
@@ -586,6 +587,49 @@
     <script src="lib/owlcarousel/owl.carousel.min.js"></script>
     <script src="lib/isotope/isotope.pkgd.min.js"></script>
     <script src="lib/lightbox/js/lightbox.min.js"></script>
+    <script>
+      function subscribe() {
+        const email = document.getElementById("emailInput").value;
+
+        if (!email) {
+          alert("Veuillez entrer une adresse e-mail valide.");
+          return;
+        }
+
+        // Appel à l'API ou traitement du formulaire ici
+        console.log("Inscription réussie pour :", email);
+
+        // Réinitialiser le champ
+        document.getElementById("emailInput").value = "";
+        alert("Merci de vous être inscrit à notre newsletter !");
+      }
+
+      const express = require("express");
+      const bodyParser = require("body-parser");
+      const app = express();
+      const PORT = process.env.PORT || 3000;
+
+      // Middleware
+      app.use(bodyParser.json());
+
+      // Stocker les e-mails dans un tableau (ou une base de données)
+      let subscribers = [];
+
+      // Route pour gérer l'inscription
+      app.post("/subscribe", (req, res) => {
+        const { email } = req.body;
+        if (subscribers.includes(email)) {
+          return res.status(400).json({ message: "Déjà inscrit." });
+        }
+        subscribers.push(email);
+        res.status(200).json({ message: "Inscription réussie !" });
+      });
+
+      // Démarrer le serveur
+      app.listen(PORT, () => {
+        console.log(`Server is running on http://localhost:${PORT}`);
+      });
+    </script>
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
