@@ -140,7 +140,7 @@
                 réalité. Remplissez le formulaire ci-dessous et nous vous
                 contacterons rapidement.
               </p>
-              <form>
+              <form action="https://formspree.io/f/mpwagkoj" method="POST">
                 <div class="row g-3">
                   <div class="col-md-6">
                     <div class="form-floating">
@@ -148,6 +148,7 @@
                         type="text"
                         class="form-control"
                         id="nom"
+                        name="name"
                         placeholder="Votre Nom"
                       />
                       <label for="nom">Votre Nom</label>
@@ -158,6 +159,7 @@
                       <input
                         type="email"
                         class="form-control"
+                        name="email"
                         id="email"
                         placeholder="Votre Email"
                       />
@@ -170,6 +172,7 @@
                         type="text"
                         class="form-control"
                         id="sujet"
+                        name="subject"
                         placeholder="Sujet"
                       />
                       <label for="sujet">Sujet</label>
@@ -180,6 +183,7 @@
                       <textarea
                         class="form-control"
                         placeholder="Laissez un message ici"
+                        name="message"
                         id="message"
                         style="height: 100px"
                       ></textarea>
